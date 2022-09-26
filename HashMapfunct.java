@@ -4,17 +4,20 @@ import java.util.Map;
 public class HashMapfunct {
     public static void main(String[] args) {
         // Creating a HashMap
-        Map<String, Integer> numberMapping = new HashMap<>();
+        Map<String, Integer> menuMapping = new HashMap<>();
 
         // Adding key-value pairs to a HashMap
-        numberMapping.put("One", 1);
-        numberMapping.put("Two", 2);
-        numberMapping.put("Three", 3);
+        menuMapping.put("Jolly Chicknjoy", 1);
+        menuMapping.put("Jolly Spaghetti", 2);
+        menuMapping.put("Jolly Hotdog and Pies", 3);
+        menuMapping.put("Jolly Burgers", 4);
+        menuMapping.put("Jolly CokeFloat", 5);
+        menuMapping.put("Jolly Palabok", 6);
 
         // Add a new key-value pair only if the key does not exist in the HashMap, or is mapped to `null`
-        numberMapping.putIfAbsent("Four", 4);
+        menuMapping.putIfAbsent("Four", 4);
 
-        System.out.println(numberMapping);
+        System.out.println(menuMappingg);
     }
       
 }
