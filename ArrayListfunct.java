@@ -10,27 +10,29 @@ public class ArrayListfunct {
         Scanner in = new Scanner(System.in);
 
         
-        ArrayList <Integer> numberArrayList = new ArrayList<>();
-        numberArrayList.add(1);
-        numberArrayList.add(2);
-        numberArrayList.add(3);
-        numberArrayList.add(4);
-        numberArrayList.add(5);
-        numberArrayList.add(6);
-        numberArrayList.add(7);
-        numberArrayList.add(8);
-        numberArrayList.add(9);
+        ArrayList <Integer> NumArrList = new ArrayList<>();
+        NumArrList.add(1);
+        NumArrList.add(2);
+        NumArrList.add(3);
+        NumArrList.add(4);
+        NumArrList.add(5);
+        NumArrList.add(6);
+        NumArrList.add(7);
+        NumArrList.add(8);
+        NumArrList.add(9);
         char ch;
         
+    do{
         System.out.println("#======================================");
-        System.out.println("##                 Given:            ##");
-        System.out.println("##    "+numberArrayList +"     ##");
+        System.out.println("##                 Numbers:           ##");
+        System.out.println("##    "+NumArrList +"     ##");
         System.out.println("#======================================");
         System.out.println("#          Choose an action           #");
         System.out.println("#             1. Add                  #");
         System.out.println("#             2. Remove               #");
         System.out.println("#             3. Display              #");
-        System.out.println("#             4. Exit                 #");
+        System.out.println("#             4. Clear                #");
+        System.out.println("#             5. Exit                 #");
         System.out.println("#======================================");
         
 	System.out.print("\nEnter action number: ");
@@ -41,17 +43,18 @@ public class ArrayListfunct {
         //---------- adds a number to the list ---------------  
                 case '1':
                     System.out.println("#======================================");
-                    System.out.println("\n**         Adding Number...        **");
-                        int number = 0;
-                        System.out.print("\nInput a number: ");
-                        number = in.nextInt();
+                    System.out.println("#          Adding Number...           #");
+                        int num = 0;
+                        System.out.print("Enter a number: ");
+                        num = in.nextInt();
           //---------- condition ---------------
-                    if (number >= 0){
-                        numberArrayList.add(number);
-                        System.out.println("The added number is:" + numberArrayList.get(5));
-                        System.out.println(numberArrayList);
+                    if (num >= 0){
+                        NumArrList.add(num);
+                        System.out.println("Your added number is:" + NumArrList.get(9));
+                        System.out.println(NumArrList);
                     }else{
-                        System.out.print("\nPlease input a POSITIVE NUMBER\n");
+                        System.out.print("#    Please input a POSITIVE NUMBER    #");
+                        System.out.println("#======================================");
                     }
                     break;
                 case '2':
@@ -59,22 +62,30 @@ public class ArrayListfunct {
 
                     System.out.println("#======================================");
                     System.out.println("\n***       Removing a Number       ***");
-                    System.out.print("\nInput the index you want to remove: ");
-                    int number2 = in.nextInt();
-                    numberArrayList.remove(number2);
-                    System.out.println("The removed index number is:" + number2);
-                    System.out.println("The latest ArrayList:" + numberArrayList);
+                    System.out.print(" index you want to remove: ");
+                    int num2 = in.nextInt();
+                    NumArrList.remove(num2);
+                    System.out.println("The removed index number is:" + num2);
+                    System.out.println("The latest ArrayList:" + NumArrList);
                     break;
                 case '3':
         //-----------display the numbers added to the list----------------
 
                     System.out.print("\nInput a number: ");               
-                    number = in.nextInt();
-                    numberArrayList.add(number);
-                    System.out.println("The added number is:" + numberArrayList.get(5));
-                    System.out.println(numberArrayList);
+                    num = in.nextInt();
+                    NumArrList.add(num);
+                    System.out.println("The added number is:" + NumArrList.get(5));
+                    System.out.println(NumArrList);
                     break;
+
                 case '4':
+                    System.out.println("#======================================");
+                    NumArrList.clear();  
+                    System.out.println(" Content CLEARED!:" + NumArrList +" ");
+                    System.out.println("#======================================");
+                break;
+
+                case '5':
          //-----------quit----------------            
             
                     System.out.println("#======================================");
@@ -88,7 +99,8 @@ public class ArrayListfunct {
                     System.out.println("#======================================");
                     break;
             }
-            
+        }while (ch !='9');       
     }
     
 }
+
