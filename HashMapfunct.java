@@ -12,8 +12,10 @@ public class HashMapfunct {
 		HashMap<Integer, Integer> hashmap = new HashMap<Integer, Integer>();
         hashmap.put(0, 10);
         hashmap.put(1, 20);
-        hashmap.put(2,30);
+        hashmap.put(2, 30);
         hashmap.put(3, 40);
+	hashmap.put(4, 50);
+	hashmap.put(5, 60);
          // Ask user:
         while(true){
         System.out.println(""); 
