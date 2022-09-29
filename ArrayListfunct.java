@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class arraylistfunct {
+public class ArrayListfunct {
 
     public static void main(String[] args) {
         
