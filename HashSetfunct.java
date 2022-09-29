@@ -9,24 +9,31 @@ public class HashSetfunct {
 
         
         HashSet<Integer> numberHashSet = new HashSet<>();
-        numberHashSet.add(9);
-        numberHashSet.add(7);
-        numberHashSet.add(5);
-        numberHashSet.add(3);
         numberHashSet.add(1);
+        numberHashSet.add(2);
+        numberHashSet.add(3);
+        numberHashSet.add(4);
+        numberHashSet.add(5);
+        numberHashSet.add(6);
+        numberHashSet.add(7);
+        numberHashSet.add(8);
+        numberHashSet.add(9);
         char choice;
         int number = 0;
 
         
         do{
-            System.out.print("\n====================================================================");
-            System.out.println("\nGiven numbers in HASHSET Collection:" + numberHashSet);
-            System.out.println("\nChoose from below:");
-            System.out.print("1. Add");
-            System.out.print("\n2. Remove");
-            System.out.print("\n3. Display");
-            System.out.print("\n4. Clear");
-            System.out.print("\n5. Exit");
+            System.out.println("#======================================");
+            System.out.println("##                 Given:            ##");
+            System.out.println("##    "+numberHashSet +"    ##");
+            System.out.println("#======================================");
+            System.out.println("#          Choose an action           #");
+            System.out.println("#             1. Add                  #");
+            System.out.println("#             2. Remove               #");
+            System.out.println("#             3. Display              #");
+            System.out.println("#             4. Clear                #");
+            System.out.println("#             5. Exit                 #");
+            System.out.println("#======================================");
 
             System.out.print("\nSelected option: ");
             choice = input.next().charAt(0);
@@ -34,56 +41,59 @@ public class HashSetfunct {
             
             switch (choice) {
             case '1':
-                System.out.print("\n====================================================================");
-                System.out.print("\n***** You are going to ADD a NUMBER *****");
+                System.out.println("#======================================");
+                System.out.println("\n**         Adding Number...        **");
                 System.out.print("\nInput a number: ");
                 number = in.nextInt();
                 //----------------------------CONDITION ADDED ----------------------------
                 if(numberHashSet.contains(number)){
-                    System.out.print("\nThe number inputted is already in the HashSet Collection.\n");
-                    System.out.print("\n*** Please Try inputting another number. ***\n");
-                    System.out.print("\n********************************************************************");
+                    System.out.print("\nThe number already exist!     \n");
+                    System.out.print("\n*** Please input again. ***\n");
+                    System.out.println("#======================================#");
                  } else {
                     numberHashSet.add(number);
                     System.out.println("\nThe added number is: " + number);
                     System.out.println("\nThe latest HashSet Collection:" + numberHashSet);
-                    System.out.print("\n********************************************************************");
+                    System.out.println("#======================================#");
                  }
                 //------------------------------------------------------------------------
                 break;
                 
             case '2':
-                System.out.println("\n***** You are now going to REMOVE a NUMBER *****");
+                System.out.println("#======================================#");
+                System.out.println("\n***       Removing a Number       ***");
                 System.out.print("Input the number you want to remove: ");
                 int number2 = in.nextInt();
                 numberHashSet.remove(number2);
                 System.out.println("\nThe removed number number is:" + number2);
                 System.out.println("\nThe latest HashSet Collection:" + numberHashSet);
-                System.out.print("\n********************************************************************");
+                System.out.println("#======================================#");
                 break;
                 
             case '3':
                 System.out.println("\nThe added number earlier is:" + number);
                 System.out.println("\nThe latest HashSet Collection:" + numberHashSet);
-                System.out.print("\n********************************************************************");
+                System.out.println("#======================================#");
                 break;
                 
             case '4':
-                System.out.print("\n********************************************************************\n"); 
+                System.out.println("#======================================#"); 
                 numberHashSet.clear();  
-                System.out.println("\n\t\tCLEARED HashSet Collection:" + numberHashSet);
-                System.out.print("\n********************************************************************\n"); 
+                System.out.println("\n\t\tCollection CLEARED!:" + numberHashSet);
+                System.out.println("#======================================#"); 
                 break;
                 
             case '5':
-                System.out.print("\n====================================================================\n"); 
-                System.out.println("\n******* THANK YOU FOR USING THIS SIMPLE PROGRAM. ADIOS! *******");  
-                System.out.print("\n====================================================================\n\n"); 
+                System.out.println("#======================================");
+                System.out.println("*       Quiting the process....       *"); 
+                System.out.println("*       Thanks for dropping by!       *");
+                System.out.println("#======================================");
                 break;
                 
             default:
-                System.out.println("\nJust Pick fron the options given above. Please try Again. ");
-                System.out.print("\n********************************************************************");
+                System.out.println("#======================================");
+                System.out.println("#      Error input, pls try again!     ");
+                System.out.println("#======================================");
                 break;
         }
         }while (choice != '5');

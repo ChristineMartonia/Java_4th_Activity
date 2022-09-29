@@ -2,6 +2,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class HashMapfunct {
+    private static char[] menuMappingg;
+
     public static void main(String[] args) {
         // Creating a HashMap
         Map<String, Integer> menuMapping = new HashMap<>();
