@@ -8,24 +8,24 @@ public class HashSetfunct {
         Scanner in = new Scanner(System.in);
 
         
-        HashSet<Integer> numberHashSet = new HashSet<>();
-        numberHashSet.add(1);
-        numberHashSet.add(2);
-        numberHashSet.add(3);
-        numberHashSet.add(4);
-        numberHashSet.add(5);
-        numberHashSet.add(6);
-        numberHashSet.add(7);
-        numberHashSet.add(8);
-        numberHashSet.add(9);
+        HashSet<Integer> hSet = new HashSet<>();
+        hSet.add(1);
+        hSet.add(2);
+        hSet.add(3);
+        hSet.add(4);
+        hSet.add(5);
+        hSet.add(6);
+        hSet.add(7);
+        hSet.add(8);
+        hSet.add(9);
         char ch;
-        int number = 0;
+        int num = 0;
 
         
         do{
             System.out.println("#======================================");
             System.out.println("##                 Given:            ##");
-            System.out.println("##    "+numberHashSet +"    ##");
+            System.out.println("##    "+hSet +"    ##");
             System.out.println("#======================================");
             System.out.println("#          Choose an action           #");
             System.out.println("#             1. Add                  #");
@@ -45,16 +45,16 @@ public class HashSetfunct {
                 System.out.println("#======================================");
                 System.out.println("\n**         Adding Number...        **");
                 System.out.print("\nInput a number: ");
-                number = in.nextInt();
+                num = in.nextInt();
             //---------- condition ---------------
-                if(numberHashSet.contains(number)){
+                if(hSet.contains(num)){
                     System.out.print("\nThe number already exist!     \n");
                     System.out.print("\n*** Please input again. ***\n");
                     System.out.println("#======================================#");
                  } else {
-                    numberHashSet.add(number);
-                    System.out.println("\nThe added number is: " + number);
-                    System.out.println("\nThe latest HashSet Collection:" + numberHashSet);
+                    hSet.add(num);
+                    System.out.println("\nThe added number is: " + num);
+                    System.out.println("\nThe latest HashSet Collection:" + hSet);
                     System.out.println("#======================================#");
                  }
                 break;
@@ -64,25 +64,25 @@ public class HashSetfunct {
                 System.out.println("#======================================#");
                 System.out.println("\n***       Removing a Number       ***");
                 System.out.print("Input the number you want to remove: ");
-                int number2 = in.nextInt();
-                numberHashSet.remove(number2);
-                System.out.println("\nThe removed number number is:" + number2);
-                System.out.println("This is your Current HashSet Collection:" + numberHashSet);
+                int num2 = in.nextInt();
+                hSet.remove(num2);
+                System.out.println("\nThe removed number number is:" + num2);
+                System.out.println("This is your Current HashSet Collection:" + hSet);
                 System.out.println("#======================================#");
                 break;
                 
             case '3':
         //----------------------------Display number added to the Set ----------------------------
-                System.out.println("\nThe added number earlier is:" + number);
-                System.out.println("\nThe latest HashSet Collection:" + numberHashSet);
+                System.out.println("\nThe added number earlier is:" + num);
+                System.out.println("\nThe latest HashSet Collection:" + hSet);
                 System.out.println("#======================================#");
                 break;
                 
             case '4':
         //----------------------------Clears the contents added to the Set ----------------------------
                 System.out.println("#======================================#"); 
-                numberHashSet.clear();  
-                System.out.println("\n\t\tContent CLEARED!:" + numberHashSet);
+                hSet.clear();  
+                System.out.println("\n\t\tContent CLEARED!:" + hSet);
                 System.out.println("#======================================#"); 
                 break;
                 
