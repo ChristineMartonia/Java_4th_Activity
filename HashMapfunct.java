@@ -17,16 +17,17 @@ public class HashMapfunct {
          // Ask user:
         while(true){
         System.out.println(""); 
-        System.out.println("Welcome! ");
-        System.out.println(""); 
-        System.out.println("These are the menus:");
-        System.out.println("======================"); 
-        System.out.println("= A. Add number      =");
-        System.out.println("= B. Remove number   =");
-        System.out.println("= C. Display numbers =");
-        System.out.println("= D. Clear numbers   =");
-        System.out.println("= E. Exit            =");
-        System.out.println("=====================");
+        System.out.println("#======================================");
+        System.out.println("##                 Numbers:           ##");
+        System.out.println("##    "+hashmap +"     ##");
+        System.out.println("#======================================");
+        System.out.println("#          Choose an action           #");
+        System.out.println("#             1. Add                  #");
+        System.out.println("#             2. Remove               #");
+        System.out.println("#             3. Display              #");
+        System.out.println("#             4. Clear                #");
+        System.out.println("#             5. Exit                 #");
+        System.out.println("#======================================");
         System.out.println("What is your choice :");
         choice = sc.next().charAt(0);
         choice = Character.toLowerCase(choice);
