@@ -6,7 +6,7 @@ public class HashMapfunct {
     
     
     public static void main(String[] args) {
-        Character choice, clear;
+        Character ch, clear;
         Scanner sc=new Scanner(System.in);
         
 		HashMap<Integer, Integer> hashmap = new HashMap<Integer, Integer>();
@@ -16,7 +16,7 @@ public class HashMapfunct {
         hashmap.put(3, 40);
 	hashmap.put(4, 50);
 	hashmap.put(5, 60);
-         // Ask user:
+
         while(true){
         System.out.println(""); 
         System.out.println("#======================================");
@@ -30,13 +30,15 @@ public class HashMapfunct {
         System.out.println("#             4. Clear                #");
         System.out.println("#             5. Exit                 #");
         System.out.println("#======================================");
-        System.out.println("What is your choice :");
-        choice = sc.next().charAt(0);
-        choice = Character.toLowerCase(choice);
+		
+       	System.out.print("\nEnter action number: ");
+        ch = input.next().charAt(0);
+      
+        ch = Character.toLowerCase(ch);
             System.out.println("");
         
-            switch(choice){
-                case 'a':
+            switch(ch){
+                case '1':
                     System.out.println("Note: Only enter composite numbers.");
                     System.out.print("Enter number you want to add: ");
                     int add = sc.nextInt();
@@ -73,8 +75,10 @@ public class HashMapfunct {
                     }
 
                     break;
-                case 'b':
-                    System.out.print("Enter key you want to remove: ");
+                case '2':
+                    System.out.println("#======================================");
+                    System.out.println("\n***       Removing a Number       ***");
+                    System.out.print(" index you want to remove: ");
                     int remove = sc.nextInt();
                     System.out.println("");
 
@@ -85,7 +89,7 @@ public class HashMapfunct {
 
                     break;
 
-                case 'c':
+                case '3':
 
                     System.out.println("Displaying numbers in HashMap");
                     System.out.println("============================");
@@ -94,35 +98,38 @@ public class HashMapfunct {
                         System.out.println(entry.getKey() + "=>" + entry.getValue());
                     });
 
-
-                    System.out.println("============================");
-
                     break;
 
-                case 'd':
+                case '4':
 
                     System.out.print("Are you sure you want to clear contents?(y/n): ");
                     clear = sc.next().charAt(0);
                     clear = Character.toLowerCase(clear);
                     switch(clear){
-                        case 'y':
-                            System.out.println("CLEARING!!!");
-                            System.out.println("Clearing hashmap...");
+			    case 'y':
                             hashmap.clear();
-                            System.out.println("============================");
-                            System.out.println("Contents all cleared!");
-                            System.out.println("============================");
+                            System.out.println("#======================================");  
+			    System.out.println(" Content CLEARED!:" + NumArrList +" ");
+			    System.out.println("#======================================");
                             break;
                         case 'n':
                             System.out.println("HashMap not cleared!");
                             break;
                     }
                     break;
-                case 'e':
+                case '5':
+	  //-----------quit----------------            
+            
+                    System.out.println("#======================================");
+                    System.out.println("*       Quiting the process....       *"); 
+                    System.out.println("*       Thanks for dropping by!       *");
+                    System.out.println("#======================================"); 
                     sc.close();
                     System.exit(0);
                 default:
-                    System.out.println("Invalid! Please input the proper choice!");
+                    System.out.println("#======================================");
+                    System.out.println("#      Error input, pls try again!     ");
+                    System.out.println("#======================================");
 
     
             } 
