@@ -1,4 +1,4 @@
-
+package Martonia;
 
 public class Pet<VariableType>{
     private String petName;
