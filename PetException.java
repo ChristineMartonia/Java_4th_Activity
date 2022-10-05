@@ -1,4 +1,4 @@
-package myjava;
+package Martonia;
 
 public class PetException extends Exception
 {
