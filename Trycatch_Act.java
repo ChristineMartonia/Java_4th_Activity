@@ -10,8 +10,13 @@ public class TrycatchActivity {
         List<String> Pet = new ArrayList<String>();
 
 
-
-        System.out.print("     [0,1,2,3,4]");
+        
+        System.out.println("#======================================");
+        System.out.println("#          Choose an index            #");
+        System.out.println("#                                     #");
+        System.out.println("#            [0,1,2,3,4]              #");
+        System.out.println("#                                     #");
+        System.out.println("#======================================");
         System.out.print("\nEnter your choosen index:");
         int input = sc.nextInt();
     //String petName;
