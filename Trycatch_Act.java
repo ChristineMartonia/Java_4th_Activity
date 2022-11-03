@@ -18,9 +18,7 @@ public class TrycatchActivity {
                         String kind = s.next();
                         System.out.println("Enter Pet  color: ");
                         String color = s.next();
-                        System.out.println("Enter Pet concern (eyes, nose, arm..): ");
-                        String concern = s.next();
-                        Pet animal = new Pet(name, kind, color, concern);
+                        Pet animal = new Pet(name, kind, color);
                         pets.add(animal);
                         System.out.println("Your Pets: " + petss + "\n" + animal);
                     }else {
